@@ -1,0 +1,116 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#toggle-mode {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0066ff, #3399ff);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  flex-wrap: wrap;
+}
+
+.features div {
+  max-width: 300px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.features h2 {
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.social-media a img {
+  width: 24px;
+  margin: 0 10px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #111;
+  color: #ddd;
+}
+
+body.dark-mode nav,
+body.dark-mode footer {
+  background-color: #000;
+}
+
+body.dark-mode .features {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode nav ul li a,
+body.dark-mode #toggle-mode {
+  color: #ddd;
+}
