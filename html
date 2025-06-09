@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motivational Blog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="dark-mode">
+  <header>
+    <nav>
+      <div class="logo">RiseUp</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="toggle-mode">Toggle Dark Mode</button>
+    </nav>
+  </header> <main>
+    <section class="hero">
+      <h1>Unleash Your Potential</h1>
+      <p>Empowering men to build discipline, strength, and purpose.</p>
+    </section>
+    <section class="features">
+      <div>
+        <h2>Latest Blog</h2>
+        <p><a href="blog.html">Read our newest post</a></p>
+      </div>
+      <div>
+        <h2>Inspiration Gallery</h2>
+        <p><a href="gallery.html">See our visuals</a></p>
+      </div>
+      <div>
+        <h2>Motivational Videos</h2>
+        <p><a href="videos.html">Watch now</a></p>
+      </div>
+    </section>
+  </main> <footer>
+    <div class="social-media">
+      <a href="#" aria-label="Facebook"><img src="icons/facebook.svg" alt="Facebook" /></a>
+      <a href="#" aria-label="Twitter"><img src="icons/twitter.svg" alt="Twitter" /></a>
+      <a href="#" aria-label="Instagram"><img src="icons/instagram.svg" alt="Instagram" /></a>
+      <a href="#" aria-label="YouTube"><img src="icons/youtube.svg" alt="YouTube" /></a>
+    </div>
+    <p>&copy; 2025 RiseUp. All rights reserved.</p>
+  </footer> <script>
+    // GSAP animations
+    gsap.from(".hero h1", { duration: 1, y: -50, opacity: 0 });
+    gsap.from(".hero p", { duration: 1, delay: 0.5, y: 30, opacity: 0 });
+    gsap.from(".features div", { duration: 1, stagger: 0.3, y: 20, opacity: 0 });
+    gsap.from(".gallery img", {
+      duration: 1,
+      opacity: 0,
+      y: 20,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".gallery",
+        start: "top 80%",
+      }
+    });
+    gsap.from(".videos video", {
+      duration: 1,
+      opacity: 0,
+      y: 20,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".videos",
+        start: "top 80%",
+      }
+    });
+    gsap.from("form", {
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      scrollTrigger: {
+        trigger: "form",
+        start: "top 90%"
+      }
+    });
+
+    // Dark mode toggle
+    document.getElementById("toggle-mode").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script></body>
+</html>
